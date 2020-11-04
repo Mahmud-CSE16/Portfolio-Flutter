@@ -6,7 +6,7 @@ import 'package:mahmud_portfolio/components/section_title.dart';
 import '../../constants.dart';
 import 'components/socal_card.dart';
 
-class ContactSection extends StatelessWidget {
+class FollowSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +17,7 @@ class ContactSection extends StatelessWidget {
         color: Color(0xFFE8F0F9),
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage("assets/images/bg_img_2.png"),
+          image: AssetImage("assets/images/follow_us_bg.jpg"),
         ),
       ),
       child: Container(
@@ -26,9 +26,9 @@ class ContactSection extends StatelessWidget {
           children: [
             SizedBox(height: kDefaultPadding * 2.5),
             SectionTitle(
-              title: "Contact Me",
-              subTitle: "For Project inquiry and information",
-              color: Color(0xFF07E24A),
+              title: "Follow Me",
+              subTitle: "Interested in me",
+              color: Color(0xFF1cbde6)
             ),
             ContactBox()
           ],
@@ -59,53 +59,27 @@ class ContactBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SocalCard(
-                color: Color(0xFFE4FFC7),
-                iconSrc: "assets/images/whatsapp.png",
-                name: 'WhatsApp',
-                press: () {},
-              ),
-              SocalCard(
-                color: Color(0xFFD9FFFC),
-                iconSrc: "assets/images/telegram.png",
-                name: 'Telegram',
+                color: Color(0xFFc9e0ff),
+                iconSrc: "assets/images/linkedin.png",
+                name: 'Linkedin',
                 press: () {},
               ),
               SocalCard(
                 color: Color(0xFFE8F0F9),
-                iconSrc: "assets/images/messenger.png",
-                name: 'Messenger',
+                iconSrc: "assets/images/facebook.png",
+                name: 'Facebook',
+                press: () {},
+              ),
+              SocalCard(
+                color: Color(0xFFabf7ff),
+                iconSrc: "assets/images/github.png",
+                name: 'Github',
                 press: () {},
               ),
             ],
           ),
-          SizedBox(height: kDefaultPadding * 2),
-          ContactForm(),
         ],
       ),
-    );
-  }
-}
-
-class ContactForm extends StatelessWidget {
-  const ContactForm({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: kDefaultPadding * 2),
-        Center(
-          child: FittedBox(
-            child: DefaultButton(
-              imageSrc: "assets/images/contact_icon.png",
-              text: "Contact Me!",
-              press: () {},
-            ),
-          ),
-        )
-      ],
     );
   }
 }

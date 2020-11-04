@@ -42,12 +42,12 @@ class SectionTitle extends StatelessWidget {
                 style:
                     TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
               ),
-              Text(
-                title,
-                style: Theme.of(context)
-                    .textTheme
-                    .headline2
-                    .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
+              FittedBox(
+                fit: BoxFit.contain,
+                child: Text(
+                  title,
+                  style: TextStyle(fontSize: 45,fontWeight: FontWeight.bold, color: Colors.black),
+                ),
               )
             ],
           )

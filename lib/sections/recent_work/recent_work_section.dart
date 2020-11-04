@@ -11,6 +11,7 @@ class RecentWorkSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: kDefaultPadding * 6),
+      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
       width: double.infinity,
       // just for demo
       // height: 600,
@@ -36,6 +37,9 @@ class RecentWorkSection extends StatelessWidget {
           SizedBox(
             width: 1110,
             child: Wrap(
+              alignment: WrapAlignment.center,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              runAlignment: WrapAlignment.center,
               spacing: kDefaultPadding,
               runSpacing: kDefaultPadding * 2,
               children: List.generate(

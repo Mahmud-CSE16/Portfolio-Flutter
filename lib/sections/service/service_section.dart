@@ -9,9 +9,11 @@ class ServiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+      margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2,horizontal: kDefaultPadding),
+      alignment: Alignment.centerLeft,
       constraints: BoxConstraints(maxWidth: 1110),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SectionTitle(
             color: Color(0xFFFF0000),
@@ -21,7 +23,6 @@ class ServiceSection extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: List.generate(

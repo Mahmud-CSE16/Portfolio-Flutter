@@ -25,7 +25,7 @@ class TopSection extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage("assets/images/background.png"),
+          image: AssetImage("assets/images/top-bg.gif"),
         ),
       ),
       child: Container(
@@ -40,7 +40,7 @@ class TopSection extends StatelessWidget {
               child: PersonPic(),
             ),
             Positioned(
-              bottom: 0,
+              bottom: -3,
               left: 0,
               right: 0,
               child: Menu(gotoSectoinMethods: gotoSectoinMethods,),

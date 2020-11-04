@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mahmud_portfolio/sections/about/about_section.dart';
 import 'package:mahmud_portfolio/sections/contact/contact_section.dart';
 import 'package:mahmud_portfolio/sections/feedback/feedback_section.dart';
+import 'package:mahmud_portfolio/sections/follow_us/follow_us.dart';
 import 'package:mahmud_portfolio/sections/recent_work/recent_work_section.dart';
 import 'package:mahmud_portfolio/sections/service/service_section.dart';
 import 'package:mahmud_portfolio/sections/top_section/top_section.dart';
@@ -75,6 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               key: contactSectionKey,
               child: ContactSection()),
+            Container(
+              //key: contactSectionKey,
+              child: FollowSection()),
           ]
         ),
       ),

@@ -20,34 +20,37 @@ class HireMeCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Image.asset(
-            "assets/images/email.png",
-            height: 80,
-            width: 80,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-            child: SizedBox(
+          MediaQuery.of(context).size.width > 800 ? Padding(
+            padding: const EdgeInsets.only(right:20.0),
+            child: Image.asset(
+              "assets/images/email.png",
               height: 80,
-              child: VerticalDivider(),
+              width: 80,
             ),
-          ),
+          ):SizedBox(),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Starting New Project?",
-                  style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+                FittedBox(
+                  fit: BoxFit.contain,
+                   child: Text(
+                    "Starting New Project?",
+                    style: TextStyle(fontSize:45,fontWeight: FontWeight.bold),
+                  ),
                 ),
                 SizedBox(height: kDefaultPadding / 2),
-                Text(
-                  "Get an estimate for the new project",
-                  style: TextStyle(fontWeight: FontWeight.w200),
+                FittedBox(
+                  fit: BoxFit.contain,
+                    child: Text(
+                    "Get an estimate for the new project",
+                    style: TextStyle(fontWeight: FontWeight.w200),
+                  ),
                 )
               ],
             ),
           ),
+          SizedBox(width:10),
           DefaultButton(
             text: "Hire Me!",
             imageSrc: "assets/images/hand.png",

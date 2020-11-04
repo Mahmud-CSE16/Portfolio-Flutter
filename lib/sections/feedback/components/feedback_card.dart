@@ -30,7 +30,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
       },
       child: AnimatedContainer(
         duration: duration,
-        margin: EdgeInsets.only(top: kDefaultPadding * 3),
+        margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 4, horizontal: kDefaultPadding*.5),
         padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
         height: 350,
         width: 350,
