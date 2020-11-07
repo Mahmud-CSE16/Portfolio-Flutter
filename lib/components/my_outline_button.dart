@@ -27,6 +27,7 @@ class MyOutlineButton extends StatelessWidget {
         borderSide: BorderSide(color: Color(0xFFEDEDED)),
         onPressed: press,
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
               imageSrc,

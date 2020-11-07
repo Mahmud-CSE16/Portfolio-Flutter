@@ -30,10 +30,10 @@ class _FeedbackCardState extends State<FeedbackCard> {
       },
       child: AnimatedContainer(
         duration: duration,
-        margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 4, horizontal: kDefaultPadding*.5),
+        margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 3, horizontal: kDefaultPadding*.5),
         padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
         height: 350,
-        width: 350,
+        width: 250,
         decoration: BoxDecoration(
           color: feedbacks[widget.index].color,
           borderRadius: BorderRadius.circular(10),
@@ -42,11 +42,11 @@ class _FeedbackCardState extends State<FeedbackCard> {
         child: Column(
           children: [
             Transform.translate(
-              offset: Offset(0, -55),
+              offset: Offset(0, -45),
               child: AnimatedContainer(
                 duration: duration,
-                height: 100,
-                width: 100,
+                height: 80,
+                width: 80,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(color: Colors.white, width: 10),
@@ -61,17 +61,18 @@ class _FeedbackCardState extends State<FeedbackCard> {
               feedbacks[widget.index].review,
               style: TextStyle(
                 color: kTextColor,
-                fontSize: 18,
+                fontSize: 17,
                 fontWeight: FontWeight.w300,
                 fontStyle: FontStyle.italic,
                 height: 1.5,
               ),
             ),
-            SizedBox(height: kDefaultPadding * 2),
+            Expanded(child: SizedBox(height: kDefaultPadding)),
             Text(
               "Ronald Thompson",
               style: TextStyle(fontWeight: FontWeight.bold),
-            )
+            ),
+            SizedBox(height: kDefaultPadding * 1.5),
           ],
         ),
       ),

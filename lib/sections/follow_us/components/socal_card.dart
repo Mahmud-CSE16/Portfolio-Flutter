@@ -46,10 +46,10 @@ class _SocalCardState extends State<SocalCard> {
             children: [
               Image.asset(
                 widget.iconSrc,
-                height: 70,
-                width: 70,
+                height: 45,
+                width: 45,
               ),
-              MediaQuery.of(context).size.width >900 ? Padding(
+              MediaQuery.of(context).size.width >800 ? Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Text(widget.name, style: TextStyle(fontSize: 20),),
               ):SizedBox(),

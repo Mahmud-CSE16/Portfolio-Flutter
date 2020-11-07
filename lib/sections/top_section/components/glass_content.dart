@@ -48,7 +48,7 @@ class GlassContent extends StatelessWidget {
             Text(
               "Full Stack Developer | Android | iOS | Flutter | Django | React | SQL | RDBMS | Git",
               style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width*.012,
+                fontSize: MediaQuery.of(context).size.width*.013,
                 color: Colors.white,
                 height: 2,
               ),

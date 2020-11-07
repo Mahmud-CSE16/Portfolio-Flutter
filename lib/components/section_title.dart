@@ -16,16 +16,15 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding),
       constraints: BoxConstraints(maxWidth: 1110),
       height: 100,
       child: Row(
         children: [
           Container(
             margin: EdgeInsets.only(right: kDefaultPadding),
-            padding: EdgeInsets.only(bottom: 72),
+            padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width > 600 ? 72 : 52),
             width: 8,
-            height: 100,
+            height:  MediaQuery.of(context).size.width > 600 ? 100 : 80,
             color: Colors.black,
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -42,12 +41,9 @@ class SectionTitle extends StatelessWidget {
                 style:
                     TextStyle(fontWeight: FontWeight.w200, color: kTextColor),
               ),
-              FittedBox(
-                fit: BoxFit.contain,
-                child: Text(
-                  title,
-                  style: TextStyle(fontSize: 45,fontWeight: FontWeight.bold, color: Colors.black),
-                ),
+              Text(
+                title,
+                style: TextStyle(fontSize: MediaQuery.of(context).size.width > 600 ? 45: 30,fontWeight: FontWeight.bold, color: Colors.black),
               )
             ],
           )

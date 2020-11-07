@@ -31,8 +31,8 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
       },
       child: AnimatedContainer(
         duration: Duration(milliseconds: 200),
-        height: 320,
-        width: 540,
+        height: 220,
+        width: 500,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -54,7 +54,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                       recentWorks[widget.index].title,
                       style: Theme.of(context)
                           .textTheme
-                          .headline5
+                          .headline6
                           .copyWith(height: 1.5),
                     ),
                     SizedBox(height: kDefaultPadding),

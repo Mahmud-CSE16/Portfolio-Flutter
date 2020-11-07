@@ -24,6 +24,7 @@ class DefaultButton extends StatelessWidget {
       color: Color(0xFFE8F0F9),
       onPressed: press,
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(imageSrc, height: 40),
           SizedBox(width: kDefaultPadding),

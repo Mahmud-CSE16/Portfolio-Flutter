@@ -13,7 +13,7 @@ final kDefaultShadow = BoxShadow(
 
 final kDefaultCardShadow = BoxShadow(
   offset: Offset(0, 20),
-  blurRadius: 50,
+  blurRadius: 30,
   color: Colors.black.withOpacity(0.1),
 );
 

@@ -17,11 +17,34 @@ class AboutSection extends StatelessWidget {
         child: Column(
           children: [
             SectionTitle(
-              title: "About my story",
+              title: "About me",
               subTitle: "My Strong Arenas",
               color: Color(0xFF6cf542),
             ),
             MediaQuery.of(context).size.width > 1000 ? BigWidthContainer() : SmallWidthContainer(),
+            SizedBox(height: kDefaultPadding * 3),
+          SizedBox(
+            width: 1110,
+            child: Wrap(
+              alignment: WrapAlignment.center,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              runAlignment: WrapAlignment.center,
+              spacing: kDefaultPadding,
+              runSpacing: kDefaultPadding * 2,
+              children: [
+                MyOutlineButton(
+                  imageSrc: "assets/images/hand.png",
+                  text: "Hire Me!",
+                  press: () {},
+                ),
+                DefaultButton(
+                  imageSrc: "assets/images/download.png",
+                  text: "Download CV",
+                  press: () {},
+                ),
+              ],
+            ),
+          ),
           ],
         ),
       );
@@ -59,24 +82,6 @@ class BigWidthContainer extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: kDefaultPadding * 3),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MyOutlineButton(
-                imageSrc: "assets/images/hand.png",
-                text: "Hire Me!",
-                press: () {},
-              ),
-              SizedBox(width: kDefaultPadding * 1.5),
-              DefaultButton(
-                imageSrc: "assets/images/download.png",
-                text: "Download CV",
-                press: () {},
-              ),
-            ],
-          ),
-        
         ],
       ),
     );
@@ -109,23 +114,6 @@ class SmallWidthContainer extends StatelessWidget {
               AboutSectionText(
                 text:
                     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-              ),
-            ],
-          ),
-          SizedBox(height: kDefaultPadding * 3),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              MyOutlineButton(
-                imageSrc: "assets/images/hand.png",
-                text: "Hire Me!",
-                press: () {},
-              ),
-              SizedBox(width: kDefaultPadding * 1.5),
-              DefaultButton(
-                imageSrc: "assets/images/download.png",
-                text: "Download CV",
-                press: () {},
               ),
             ],
           ),

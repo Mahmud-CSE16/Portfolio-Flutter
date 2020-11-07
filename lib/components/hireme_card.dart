@@ -11,7 +11,7 @@ class HireMeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(kDefaultPadding * 2),
+      padding: EdgeInsets.symmetric(vertical:kDefaultPadding,horizontal: kDefaultPadding*2),
       constraints: BoxConstraints(maxWidth: 1110),
       decoration: BoxDecoration(
         color: Colors.white,

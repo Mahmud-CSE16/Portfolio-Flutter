@@ -23,63 +23,74 @@ class _HomeScreenState extends State<HomeScreen> {
   final recentWorkSectionKey = new GlobalKey();
   final feedbackSectionKey = new GlobalKey();
   final contactSectionKey = new GlobalKey();
+  ScrollController _scrollController = ScrollController();
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              key: topSectionKey,
-              child: TopSection(gotoSectoinMethods: [
-                (){
-                  //topsectionkey
-                  Scrollable.ensureVisible(topSectionKey.currentContext);
-                },
-                (){
-                  //aboutSectionkey
-                  Scrollable.ensureVisible(aboutSectionKey.currentContext);
-                },
-                (){
-                  //serviceSectionKey
-                  Scrollable.ensureVisible(serviceSectionKey.currentContext);
-                },
-                (){
-                  //recentWrokSectionKey
-                  Scrollable.ensureVisible(recentWorkSectionKey.currentContext);
-                },
-                (){
-                  //feedbackSectionKey
-                  Scrollable.ensureVisible(feedbackSectionKey.currentContext);
-                },
-                (){
-                  //contactSectionKey
-                  Scrollable.ensureVisible(contactSectionKey.currentContext);
-                },
-              ],),
-            ),
-            SizedBox(height: kDefaultPadding * 2),
-            Container(
-              key: aboutSectionKey,
-              child: AboutSection()),
-            Container(
-              key: serviceSectionKey,
-              child: ServiceSection()),
-            Container(
-              key: recentWorkSectionKey,
-              child: RecentWorkSection()),
-            Container(
-              key: feedbackSectionKey,
-              child: FeedbackSection()),
-            Container(
-              key: contactSectionKey,
-              child: ContactSection()),
-            Container(
-              //key: contactSectionKey,
-              child: FollowSection()),
-          ]
+      body: Container(
+        constraints:  BoxConstraints(minWidth: 600),
+        child: SingleChildScrollView(
+          controller: _scrollController,
+          child: Column(
+            children: [
+              Container(
+                key: topSectionKey,
+                child: TopSection(gotoSectoinMethods: [
+                  (){
+                    //topsectionkey
+                    //_scrollController.animateTo(offset)
+                    _scrollController.position.ensureVisible(
+                      topSectionKey.currentContext.findRenderObject(),
+                      alignment: 0.5, // How far into view the item should be scrolled (between 0 and 1).
+                      duration: const Duration(seconds: 1),
+                    );
+                    //Scrollable.ensureVisible(topSectionKey.currentContext,duration: Duration(microseconds: 3000,),curve: Curves.bounceIn);
+                  },
+                  (){
+                    //aboutSectionkey
+                    Scrollable.ensureVisible(aboutSectionKey.currentContext);
+                  },
+                  (){
+                    //serviceSectionKey
+                    Scrollable.ensureVisible(serviceSectionKey.currentContext);
+                  },
+                  (){
+                    //recentWrokSectionKey
+                    Scrollable.ensureVisible(recentWorkSectionKey.currentContext);
+                  },
+                  (){
+                    //feedbackSectionKey
+                    Scrollable.ensureVisible(feedbackSectionKey.currentContext);
+                  },
+                  (){
+                    //contactSectionKey
+                    Scrollable.ensureVisible(contactSectionKey.currentContext);
+                  },
+                ],),
+              ),
+              SizedBox(height: kDefaultPadding * 2),
+              Container(
+                key: aboutSectionKey,
+                child: AboutSection()),
+              Container(
+                key: serviceSectionKey,
+                child: ServiceSection()),
+              Container(
+                key: recentWorkSectionKey,
+                child: RecentWorkSection()),
+              Container(
+                key: feedbackSectionKey,
+                child: FeedbackSection()),
+              Container(
+                key: contactSectionKey,
+                child: ContactSection()),
+              Container(
+                //key: contactSectionKey,
+                child: FollowSection()),
+            ]
+          ),
         ),
       ),
     );
