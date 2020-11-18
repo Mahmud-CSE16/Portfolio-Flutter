@@ -1,34 +1,52 @@
 class RecentWork {
-  final String image, category, title;
+  final String image, category, title, url;
   final int id;
 
-  RecentWork({this.id, this.image, this.category, this.title});
+  RecentWork({this.id, this.image, this.category, this.title,this.url});
 }
 
 // Demo List of my works
 List<RecentWork> recentWorks = [
   RecentWork(
     id: 1,
-    title: "New & Fresh Looking Portfolio indeed at the end",
-    category: "Graphic Design",
-    image: "assets/images/work_1.png",
+    title: "Interactive Learning Platform in Bangladesh",
+    category: "Prottoy",
+    image: "assets/images/prottoy.jpg",
+    url: "https://play.google.com/store/apps/details?id=bd.com.prottoy"
   ),
   RecentWork(
     id: 2,
-    title: "New & Fresh Looking Portfolio indeed at the end",
-    category: "Graphic Design",
-    image: "assets/images/work_2.png",
+    title: "Easytrax GPS Tracking",
+    category: "EasyTrax",
+    image: "assets/images/easytrax-app.jpg",
+    url: "https://play.google.com/store/apps/details?id=com.bd.easytraxstandard"
   ),
   RecentWork(
     id: 3,
-    title: "New & Fresh Looking Portfolio indeed at the end",
-    category: "Graphic Design",
-    image: "assets/images/work_3.png",
+    title: "Learning Platform for Mathematics",
+    category: "Math By Rony",
+    image: "assets/images/mathbyrony.jpg",
+    url: ""
   ),
   RecentWork(
     id: 4,
-    title: "New & Fresh Looking Portfolio indeed at the end",
-    category: "Graphic Design",
-    image: "assets/images/work_4.png",
+    title: "Practice App for Business Analysis Course",
+    category: "Simplex",
+    image: "assets/images/simplex.png",
+    url: "https://play.google.com/store/apps/details?id=com.simplex.mahmud.cbapsimplified",
+  ),
+  RecentWork(
+    id: 5,
+    title: "Website Front End Development by HTML, CSS & JavaScript",
+    category: "Easytrax",
+    image: "assets/images/easytrax-web.jpg",
+    url: "https://crm.easytrax.com.bd/crm/registration",
+  ),
+  RecentWork(
+    id: 6,
+    title: "Email Template by HTML, CSS & JavaScript",
+    category: "Easytrax",
+    image: "assets/images/easytrax-email.jpg",
+    url: "",
   ),
 ];

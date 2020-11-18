@@ -6,9 +6,9 @@ const kTextLightColor = Color(0xFF555555);
 const kDefaultPadding = 20.0;
 
 final kDefaultShadow = BoxShadow(
-  offset: Offset(0, 50),
-  blurRadius: 50,
-  color: Color(0xFF0700B1).withOpacity(0.15),
+  offset: Offset(0, 40),
+  blurRadius: 40,
+  color: Color(0xFF0700B1).withOpacity(0.20),
 );
 
 final kDefaultCardShadow = BoxShadow(

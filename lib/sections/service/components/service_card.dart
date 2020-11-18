@@ -63,10 +63,10 @@ class _ServiceCardState extends State<ServiceCard> {
                 fit: BoxFit.fill,
               ),
             ),
-            SizedBox(height: kDefaultPadding),
+            SizedBox(height: 2*kDefaultPadding),
             Text(
               services[widget.index].title,
-              style: TextStyle(fontSize: 22),
+              style: TextStyle(fontSize: 17,fontWeight: FontWeight.w500),
             ),
           ],
         ),

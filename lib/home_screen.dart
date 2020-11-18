@@ -3,6 +3,7 @@ import 'package:mahmud_portfolio/sections/about/about_section.dart';
 import 'package:mahmud_portfolio/sections/contact/contact_section.dart';
 import 'package:mahmud_portfolio/sections/feedback/feedback_section.dart';
 import 'package:mahmud_portfolio/sections/follow_us/follow_us.dart';
+import 'package:mahmud_portfolio/sections/my_skills/myskills.dart';
 import 'package:mahmud_portfolio/sections/recent_work/recent_work_section.dart';
 import 'package:mahmud_portfolio/sections/service/service_section.dart';
 import 'package:mahmud_portfolio/sections/top_section/top_section.dart';
@@ -77,6 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 key: serviceSectionKey,
                 child: ServiceSection()),
+              MySkillsSection(),
               Container(
                 key: recentWorkSectionKey,
                 child: RecentWorkSection()),

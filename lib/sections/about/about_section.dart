@@ -1,7 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:mahmud_portfolio/components/default_button.dart';
 import 'package:mahmud_portfolio/components/my_outline_button.dart';
 import 'package:mahmud_portfolio/components/section_title.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 import '../../constants.dart';
@@ -17,7 +19,7 @@ class AboutSection extends StatelessWidget {
         child: Column(
           children: [
             SectionTitle(
-              title: "About me",
+              title: "About my story",
               subTitle: "My Strong Arenas",
               color: Color(0xFF6cf542),
             ),
@@ -35,12 +37,22 @@ class AboutSection extends StatelessWidget {
                 MyOutlineButton(
                   imageSrc: "assets/images/hand.png",
                   text: "Hire Me!",
-                  press: () {},
+                  press: () async{
+                    const url = 'mailto:mahmud@prottoy.com.bd';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                  },
                 ),
                 DefaultButton(
                   imageSrc: "assets/images/download.png",
                   text: "Download CV",
-                  press: () {},
+                  press: () async{
+                    const url = 'https://drive.google.com/drive/folders/1Qn8GaTk5G5IBzf6ATwr-CTp0FXOHFgtq?usp=sharing';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                  },
                 ),
               ],
             ),
@@ -68,16 +80,53 @@ class BigWidthContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(
-                child: AboutSectionText(
-                  text:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                ),
+                child: RichText(
+                  textAlign: TextAlign.justify,
+                  text: TextSpan(
+                    style: TextStyle(fontSize: 15 ,height: 2),
+                    children: [
+                      TextSpan(
+                        text: "I'm an undergraduate student at Computer Science and Technology at",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: kTextColor)
+                      ),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()..onTap = ()async{
+                          const url = 'http://www.kuet.ac.bd/';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                        text: " Khulna University of Engineering and Technology",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: Colors.blueAccent)
+                      ),
+                      TextSpan(
+                        text: ". Now, I(we) am fully dedicated to establishing an ed-tech company",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: kTextColor)
+                      ),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()..onTap = ()async{
+                          const url = 'https://prottoy.com.bd/';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                        text: " Prottoy ",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: Colors.blueAccent),
+                      ),
+                      TextSpan(
+                        text: "in Bangladesh.",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: kTextColor, )
+                      ),
+                    ]
+                  ),
+
+                )
               ),
               ExperienceCard(numOfExp: "1+"),
               Expanded(
                 child: AboutSectionText(
                   text:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                      "I'm fully passionate to develop something new with the latest technology. I have experience developing 8+ Mobile apps and 3+ websites as well as working as a team member and lead the team.",
                 ),
               ),
             ],
@@ -106,14 +155,51 @@ class SmallWidthContainer extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              AboutSectionText(
-                text:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-              ),
+              RichText(
+                  textAlign: TextAlign.justify,
+                  text: TextSpan(
+                    style: TextStyle(fontSize: 15 ,height: 2),
+                    children: [
+                      TextSpan(
+                        text: "I'm an undergraduate student at Computer Science and Technology at",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: kTextColor)
+                      ),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()..onTap = ()async{
+                          const url = 'http://www.kuet.ac.bd/';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                        text: " Khulna University of Engineering and Technology",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: Colors.blueAccent)
+                      ),
+                      TextSpan(
+                        text: ". Now, I(we) am fully dedicated to establishing an ed-tech company",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: kTextColor)
+                      ),
+                      TextSpan(
+                        recognizer: TapGestureRecognizer()..onTap = ()async{
+                          const url = 'https://prottoy.com.bd/';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                        text: " Prottoy ",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: Colors.blueAccent),
+                      ),
+                      TextSpan(
+                        text: "in Bangladesh.",
+                        style: TextStyle(fontWeight: FontWeight.w400,color: kTextColor, )
+                      ),
+                    ]
+                  ),
+
+                ),
               SizedBox(height:10),
               AboutSectionText(
                 text:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    "I'm fully passionate to develop something new with the latest technology. I have experience developing 8+ Mobile apps and 3+ websites as well as working as a team member and lead the team.",
               ),
             ],
           ),

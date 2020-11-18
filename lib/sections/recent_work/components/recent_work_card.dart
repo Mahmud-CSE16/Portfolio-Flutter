@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mahmud_portfolio/models/recent_work.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constants.dart';
 
@@ -23,7 +24,12 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: widget.press,
+      onTap: ()async{
+        var url = recentWorks[widget.index].url;
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+      },
       onHover: (value) {
         setState(() {
           isHover = value;
@@ -40,7 +46,16 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
         ),
         child: Row(
           children: [
-            Image.asset(recentWorks[widget.index].image),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [BoxShadow(
+                    offset: Offset(0, 0),
+                    blurRadius: 30,
+                    color: Color(0xFF0700B1).withOpacity(0.20),
+                  )],
+              ),
+              child: ClipRRect(borderRadius: BorderRadius.circular(10),child: Image.asset(recentWorks[widget.index].image))),
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),

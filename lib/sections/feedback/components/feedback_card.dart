@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mahmud_portfolio/models/feedback.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constants.dart';
 
@@ -21,7 +22,12 @@ class _FeedbackCardState extends State<FeedbackCard> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () async{
+        var url = feedbacks[widget.index].profileUrl;
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+      },
       hoverColor: Colors.transparent,
       onHover: (value) {
         setState(() {
@@ -32,7 +38,7 @@ class _FeedbackCardState extends State<FeedbackCard> {
         duration: duration,
         margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 3, horizontal: kDefaultPadding*.5),
         padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        height: 350,
+        height: 300,
         width: 250,
         decoration: BoxDecoration(
           color: feedbacks[widget.index].color,
@@ -49,11 +55,11 @@ class _FeedbackCardState extends State<FeedbackCard> {
                 width: 80,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white, width: 10),
+                  border: Border.all(color: Colors.white, width: 7),
                   boxShadow: [if (!isHover) kDefaultCardShadow],
-                  image: DecorationImage(
-                    image: AssetImage(feedbacks[widget.index].userPic),
-                  ),
+                ),
+                child: ClipOval(
+                  child: Image.asset(feedbacks[widget.index].userPic),
                 ),
               ),
             ),
@@ -61,15 +67,15 @@ class _FeedbackCardState extends State<FeedbackCard> {
               feedbacks[widget.index].review,
               style: TextStyle(
                 color: kTextColor,
-                fontSize: 17,
-                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.italic,
-                height: 1.5,
+                height: 1.4,
               ),
             ),
             Expanded(child: SizedBox(height: kDefaultPadding)),
             Text(
-              "Ronald Thompson",
+              feedbacks[widget.index].name+" ->",
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: kDefaultPadding * 1.5),

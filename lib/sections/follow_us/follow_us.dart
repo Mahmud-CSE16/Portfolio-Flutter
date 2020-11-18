@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mahmud_portfolio/components/default_button.dart';
 import 'package:mahmud_portfolio/components/section_title.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 import '../../constants.dart';
@@ -62,19 +62,34 @@ class ContactBox extends StatelessWidget {
                 color: Color(0xFFc9e0ff),
                 iconSrc: "assets/images/linkedin.png",
                 name: 'Linkedin',
-                press: () {},
+                press: () async{
+                  const url = 'https://www.linkedin.com/in/mahmudul7959/';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                },
               ),
               SocalCard(
                 color: Color(0xFFE8F0F9),
                 iconSrc: "assets/images/facebook.png",
                 name: 'Facebook',
-                press: () {},
+                press: () async{
+                  const url = 'https://fb.me/mahmudul7959';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                },
               ),
               SocalCard(
                 color: Color(0xFFabf7ff),
                 iconSrc: "assets/images/github.png",
                 name: 'Github',
-                press: () {},
+                press: () async{
+                  const url = 'https://github.com/Mahmud-CSE16';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                },
               ),
             ],
           ),

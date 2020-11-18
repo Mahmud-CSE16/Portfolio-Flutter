@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mahmud_portfolio/components/default_button.dart';
 import 'package:mahmud_portfolio/components/section_title.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 import '../../constants.dart';
@@ -62,68 +63,99 @@ class ContactBox extends StatelessWidget {
                 color: Color(0xFFE4FFC7),
                 iconSrc: "assets/images/whatsapp.png",
                 name: 'WhatsApp',
-                press: () {},
+                press: () async{
+                  const url = 'https://wa.me/+8801521404361';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                },
               ),
               SocalCard(
                 color: Color(0xFFD9FFFC),
                 iconSrc: "assets/images/telegram.png",
                 name: 'Telegram',
-                press: () {},
+                press: () async{
+                  const url = 'https://t.me/message/965255086';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                },
               ),
               SocalCard(
                 color: Color(0xFFE8F0F9),
                 iconSrc: "assets/images/messenger.png",
                 name: 'Messenger',
-                press: () {},
+                press: () async{
+                  const url = 'https://m.me/mahmudul7959';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                },
               ),
             ],
           ),
-          SizedBox(height: kDefaultPadding),
+          SizedBox(height: 2*kDefaultPadding),
           Wrap(
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
             runAlignment: WrapAlignment.center,
             spacing: kDefaultPadding,
-            runSpacing: kDefaultPadding * 2,
+            runSpacing: kDefaultPadding,
             children: [
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Image.asset("assets/images/contact_email.png", height: 30,width: 30,),
-                  SizedBox(width: 7,),
-                  //Text("mahmud@prottoy.com.bd"),
-                  SelectableText("mahmud@prottoy.com.bd",
-                    cursorColor: Colors.red,
-                    showCursor: true,
-                    toolbarOptions: ToolbarOptions(
-                        copy: true,
-                        selectAll: true,
-                        cut: false,
-                        paste: false
-                    ),
-                    style: TextStyle(fontSize:16 ,fontWeight: FontWeight.w500))
-                ],
+              InkWell(
+                onTap: () async{
+                  const url = 'mailto:mahmud@prottoy.com.bd';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset("assets/images/contact_email.png", height: 30,width: 30,),
+                    SizedBox(width: 7,),
+                    //Text("mahmud@prottoy.com.bd"),
+                    SelectableText("mahmud@prottoy.com.bd",
+                      cursorColor: Colors.red,
+                      showCursor: true,
+                      toolbarOptions: ToolbarOptions(
+                          copy: true,
+                          selectAll: true,
+                          cut: false,
+                          paste: false
+                      ),
+                      style: TextStyle(fontSize:16 ,fontWeight: FontWeight.w500))
+                  ],
+                ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Image.asset("assets/images/phone.png", height: 30,width: 30,),
-                  SizedBox(width: 7,),
-                  SelectableText("+8801521404361",
-                    cursorColor: Colors.red,
-                    showCursor: true,
-                    toolbarOptions: ToolbarOptions(
-                        copy: true,
-                        selectAll: true,
-                        cut: false,
-                        paste: false
-                    ),
-                    style: TextStyle(fontSize:16 ,fontWeight: FontWeight.w500))
-                ],
+              InkWell(
+                onTap: ()async{
+                  const url = 'tel:+8801521404361';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Image.asset("assets/images/phone.png", height: 30,width: 30,),
+                    SizedBox(width: 7,),
+                    SelectableText("+8801521404361",
+                      cursorColor: Colors.red,
+                      showCursor: true,
+                      toolbarOptions: ToolbarOptions(
+                          copy: true,
+                          selectAll: true,
+                          cut: false,
+                          paste: false
+                      ),
+                      style: TextStyle(fontSize:16 ,fontWeight: FontWeight.w500))
+                  ],
+                ),
               ),
             ],
           ),
-          SizedBox(height: kDefaultPadding),
+          SizedBox(height: 2*kDefaultPadding),
           ContactForm(),
         ],
       ),
@@ -145,7 +177,12 @@ class ContactForm extends StatelessWidget {
             child: DefaultButton(
               imageSrc: "assets/images/contact_icon.png",
               text: "Contact Me!",
-              press: () {},
+              press: () async{
+                const url = 'mailto:mahmud@prottoy.com.bd';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+              },
             ),
           ),
         )

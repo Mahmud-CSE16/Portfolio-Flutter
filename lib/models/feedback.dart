@@ -1,37 +1,29 @@
 import 'package:flutter/material.dart';
 
 class Feedback {
-  final String name, review, userPic;
+  final String name, review, userPic,profileUrl;
   final int id;
   final Color color;
 
-  Feedback({this.name, this.review, this.userPic, this.id, this.color});
+  Feedback({this.name, this.review, this.userPic, this.id, this.color, this.profileUrl});
 }
 
 // List of demo feedbacks
 List<Feedback> feedbacks = [
   Feedback(
     id: 1,
-    name: "Ronald Thompson",
-    review: review,
-    userPic: "assets/images/people.png",
+    name: "Shahjahan Md Swajan",
+    review: "I met Mahmud at Prottoy. Working with him as a team is really amazing. He holds a strong knowledge of database designing. He also has very strong expertise in developing mobile apps.",
+    userPic: "assets/images/swajan.jpg",
+    profileUrl:"https://www.linkedin.com/in/smswajan/",
     color: Color(0xFFFFF3DD),
   ),
   Feedback(
     id: 2,
-    name: "Ronald Thompson",
-    review: review,
-    userPic: "assets/images/people.png",
+    name: "Anjan Kundu",
+    review: "A very talented, Persistent and hardworking guy who is always sinceere about this project work. I feel so blessed having a team partner like him.",
+    userPic: "assets/images/anjan.jpg",
     color: Color(0xFFD9FFFC),
-  ),
-  Feedback(
-    id: 3,
-    name: "Ronald Thompson",
-    review: review,
-    userPic: "assets/images/people.png",
-    color: Color(0xFFFFE0E0),
+    profileUrl: "https://www.linkedin.com/in/anjan-kundu-1603/"
   ),
 ];
-
-String review =
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua enim ad minim veniam.';

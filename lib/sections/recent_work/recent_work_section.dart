@@ -41,7 +41,7 @@ class RecentWorkSection extends StatelessWidget {
               crossAxisAlignment: WrapCrossAlignment.center,
               runAlignment: WrapAlignment.center,
               spacing: kDefaultPadding,
-              runSpacing: kDefaultPadding * 2,
+              runSpacing: kDefaultPadding,
               children: List.generate(
                 recentWorks.length,
                 (index) => RecentWorkCard(index: index, press: () {}),

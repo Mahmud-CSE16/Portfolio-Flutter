@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mahmud_portfolio/components/default_button.dart';
+import 'package:mahmud_portfolio/components/my_outline_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../constants.dart';
-import 'default_button.dart';
 
 class HireMeCard extends StatelessWidget {
   const HireMeCard({
@@ -36,7 +38,7 @@ class HireMeCard extends StatelessWidget {
                   fit: BoxFit.contain,
                    child: Text(
                     "Starting New Project?",
-                    style: TextStyle(fontSize:45,fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize:35,fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(height: kDefaultPadding / 2),
@@ -54,7 +56,12 @@ class HireMeCard extends StatelessWidget {
           DefaultButton(
             text: "Hire Me!",
             imageSrc: "assets/images/hand.png",
-            press: () {},
+            press: () async{
+              const url = 'mailto:mahmud@prottoy.com.bd';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+            },
           )
         ],
       ),
