@@ -31,7 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        constraints:  BoxConstraints(minWidth: 600),
         child: SingleChildScrollView(
           controller: _scrollController,
           child: Column(
@@ -51,23 +50,48 @@ class _HomeScreenState extends State<HomeScreen> {
                   },
                   (){
                     //aboutSectionkey
-                    Scrollable.ensureVisible(aboutSectionKey.currentContext);
+                    _scrollController.position.ensureVisible(
+                      aboutSectionKey.currentContext.findRenderObject(),
+                      alignment: 0.5, // How far into view the item should be scrolled (between 0 and 1).
+                      duration: const Duration(seconds: 1),
+                    );
+                    //Scrollable.ensureVisible(aboutSectionKey.currentContext);
                   },
                   (){
                     //serviceSectionKey
-                    Scrollable.ensureVisible(serviceSectionKey.currentContext);
+                    _scrollController.position.ensureVisible(
+                      serviceSectionKey.currentContext.findRenderObject(),
+                      alignment: 0.5, // How far into view the item should be scrolled (between 0 and 1).
+                      duration: const Duration(seconds: 1),
+                    );
+                    //Scrollable.ensureVisible(serviceSectionKey.currentContext);
                   },
                   (){
                     //recentWrokSectionKey
-                    Scrollable.ensureVisible(recentWorkSectionKey.currentContext);
+                    _scrollController.position.ensureVisible(
+                      recentWorkSectionKey.currentContext.findRenderObject(),
+                      alignment: 0.5, // How far into view the item should be scrolled (between 0 and 1).
+                      duration: const Duration(seconds: 1),
+                    );
+                    //Scrollable.ensureVisible(recentWorkSectionKey.currentContext);
                   },
                   (){
                     //feedbackSectionKey
-                    Scrollable.ensureVisible(feedbackSectionKey.currentContext);
+                    _scrollController.position.ensureVisible(
+                      feedbackSectionKey.currentContext.findRenderObject(),
+                      alignment: 0.5, // How far into view the item should be scrolled (between 0 and 1).
+                      duration: const Duration(seconds: 1),
+                    );
+                    //Scrollable.ensureVisible(feedbackSectionKey.currentContext);
                   },
                   (){
                     //contactSectionKey
-                    Scrollable.ensureVisible(contactSectionKey.currentContext);
+                    _scrollController.position.ensureVisible(
+                      contactSectionKey.currentContext.findRenderObject(),
+                      alignment: 0.5, // How far into view the item should be scrolled (between 0 and 1).
+                      duration: const Duration(seconds: 1),
+                    );
+                    //Scrollable.ensureVisible(contactSectionKey.currentContext);
                   },
                 ],),
               ),

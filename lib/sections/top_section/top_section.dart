@@ -19,10 +19,11 @@ class TopSection extends StatelessWidget {
     //Size size = MediaQuery.of(context).size;
     return Container(
       alignment: Alignment.center,
-      constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height),
+      constraints: BoxConstraints(maxHeight:MediaQuery.of(context).size.width>700? MediaQuery.of(context).size.height : MediaQuery.of(context).size.width*.6),
       height: MediaQuery.of(context).size.width*.6,
       width: double.infinity,
       decoration: BoxDecoration(
+        color: Colors.black,
         image: DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage("assets/images/top-bg.gif"),

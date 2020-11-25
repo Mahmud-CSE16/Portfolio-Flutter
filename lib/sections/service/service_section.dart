@@ -9,7 +9,8 @@ class ServiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2,horizontal: kDefaultPadding),
+      margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width >650 ?kDefaultPadding:10),
       alignment: Alignment.centerLeft,
       constraints: BoxConstraints(maxWidth: 1110),
       child: Column(

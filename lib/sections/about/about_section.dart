@@ -15,7 +15,7 @@ class AboutSection extends StatelessWidget {
   Widget build(BuildContext context) {
 
       return Container(
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width >650 ?kDefaultPadding:10),
         child: Column(
           children: [
             SectionTitle(

@@ -10,7 +10,7 @@ class FeedbackSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width >650 ?kDefaultPadding:10),
       padding: EdgeInsets.only(top: kDefaultPadding * 2.5, bottom: kDefaultPadding),
       constraints: BoxConstraints(maxWidth: 1110),
       child: Column(

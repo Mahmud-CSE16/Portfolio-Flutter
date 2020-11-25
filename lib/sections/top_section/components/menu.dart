@@ -29,8 +29,8 @@ class _MenuState extends State<Menu> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*.06),
-      constraints: BoxConstraints(maxWidth: 1110,maxHeight: 80),
-      height: MediaQuery.of(context).size.width*.1,
+      constraints: BoxConstraints(maxWidth: 1110,maxHeight: 60, minHeight: 40),
+      height: MediaQuery.of(context).size.width*.07,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(

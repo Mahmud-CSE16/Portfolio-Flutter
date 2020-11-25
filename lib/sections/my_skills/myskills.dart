@@ -9,7 +9,8 @@ class MySkillsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2,horizontal: kDefaultPadding),
+      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width >650 ?kDefaultPadding:10),
+      margin: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
       alignment: Alignment.centerLeft,
       constraints: BoxConstraints(maxWidth: 1110),
       child: Column(

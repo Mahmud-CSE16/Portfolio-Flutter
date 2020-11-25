@@ -22,7 +22,7 @@ class ContactSection extends StatelessWidget {
         ),
       ),
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+        padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width >650 ?kDefaultPadding:10),
         child: Column(
           children: [
             SizedBox(height: kDefaultPadding * 2.5),

@@ -11,7 +11,7 @@ class RecentWorkSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: kDefaultPadding * 6),
-      padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width >650 ?kDefaultPadding:10),
       width: double.infinity,
       // just for demo
       // height: 600,
