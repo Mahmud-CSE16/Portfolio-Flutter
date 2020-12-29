@@ -78,7 +78,7 @@ class _MenuState extends State<Menu> {
                 right: 0,
                 bottom:
                     selectedIndex != index && hoverIndex == index ? -(1+MediaQuery.of(context).size.width*.02) : -(25+MediaQuery.of(context).size.width*.02),
-                child: Image.asset("assets/images/Hover.png"),
+                child: Image.asset("assets/images/Hover.webp"),
               ),
               // Select
               AnimatedPositioned(
@@ -86,7 +86,7 @@ class _MenuState extends State<Menu> {
                 left: 0,
                 right: 0,
                 bottom: selectedIndex == index ? -(-5+MediaQuery.of(context).size.width*.02) : -(25+MediaQuery.of(context).size.width*.02),
-                child: Image.asset("assets/images/Hover.png"),
+                child: Image.asset("assets/images/Hover.webp"),
               ),
             ],
           ),

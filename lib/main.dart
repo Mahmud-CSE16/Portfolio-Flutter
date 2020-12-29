@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Md. Mahmudul Islam',
+      title: 'Md. Mahmudul Islam | Chief Technical Officer - Prottoy | Full Stack Developer | Mobile App Developer | Flutter Developer | Django Developer',
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

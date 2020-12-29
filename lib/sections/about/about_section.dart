@@ -35,7 +35,7 @@ class AboutSection extends StatelessWidget {
               runSpacing: kDefaultPadding * 2,
               children: [
                 MyOutlineButton(
-                  imageSrc: "assets/images/hand.png",
+                  imageSrc: "assets/images/hand.webp",
                   text: "Hire Me!",
                   press: () async{
                     const url = 'mailto:mahmud@prottoy.com.bd';
@@ -45,7 +45,7 @@ class AboutSection extends StatelessWidget {
                   },
                 ),
                 DefaultButton(
-                  imageSrc: "assets/images/download.png",
+                  imageSrc: "assets/images/download.webp",
                   text: "Download CV",
                   press: () async{
                     const url = 'https://drive.google.com/drive/folders/1Qn8GaTk5G5IBzf6ATwr-CTp0FXOHFgtq?usp=sharing';
@@ -65,9 +65,6 @@ class AboutSection extends StatelessWidget {
 }
 
 class BigWidthContainer extends StatelessWidget {
-  const BigWidthContainer({
-    Key key,
-  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -139,9 +136,6 @@ class BigWidthContainer extends StatelessWidget {
 
 
 class SmallWidthContainer extends StatelessWidget {
-  const SmallWidthContainer({
-    Key key,
-  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

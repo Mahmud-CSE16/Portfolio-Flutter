@@ -25,7 +25,7 @@ class HireMeCard extends StatelessWidget {
           MediaQuery.of(context).size.width > 800 ? Padding(
             padding: const EdgeInsets.only(right:20.0),
             child: Image.asset(
-              "assets/images/email.png",
+              "assets/images/email.webp",
               height: 80,
               width: 80,
             ),
@@ -55,7 +55,7 @@ class HireMeCard extends StatelessWidget {
           SizedBox(width:10),
           DefaultButton(
             text: "Hire Me!",
-            imageSrc: "assets/images/hand.png",
+            imageSrc: "assets/images/hand.webp",
             press: () async{
               const url = 'mailto:mahmud@prottoy.com.bd';
                           if (await canLaunch(url)) {

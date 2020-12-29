@@ -17,7 +17,7 @@ class FollowSection extends StatelessWidget {
         color: Color(0xFFE8F0F9),
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage("assets/images/follow_us_bg.jpg"),
+          image: AssetImage("assets/images/follow_us_bg.webp"),
         ),
       ),
       child: Container(
@@ -60,7 +60,7 @@ class ContactBox extends StatelessWidget {
             children: [
               SocalCard(
                 color: Color(0xFFc9e0ff),
-                iconSrc: "assets/images/linkedin.png",
+                iconSrc: "assets/images/linkedin.webp",
                 name: 'Linkedin',
                 press: () async{
                   const url = 'https://www.linkedin.com/in/mahmudul7959/';
@@ -71,7 +71,7 @@ class ContactBox extends StatelessWidget {
               ),
               SocalCard(
                 color: Color(0xFFE8F0F9),
-                iconSrc: "assets/images/facebook.png",
+                iconSrc: "assets/images/facebook.webp",
                 name: 'Facebook',
                 press: () async{
                   const url = 'https://fb.me/mahmudul7959';
@@ -82,7 +82,7 @@ class ContactBox extends StatelessWidget {
               ),
               SocalCard(
                 color: Color(0xFFabf7ff),
-                iconSrc: "assets/images/github.png",
+                iconSrc: "assets/images/github.webp",
                 name: 'Github',
                 press: () async{
                   const url = 'https://github.com/Mahmud-CSE16';
