@@ -83,7 +83,7 @@ class BigWidthContainer extends StatelessWidget {
                     style: TextStyle(fontSize: 15 ,height: 2),
                     children: [
                       TextSpan(
-                        text: "I'm an undergraduate student at Computer Science and Technology at",
+                        text: "I'm an undergraduate student at Computer Science and Engineering at",
                         style: TextStyle(fontWeight: FontWeight.w400,color: kTextColor)
                       ),
                       TextSpan(
