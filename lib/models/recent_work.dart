@@ -15,18 +15,25 @@ List<RecentWork> recentWorks = [
     url: "https://play.google.com/store/apps/details?id=bd.com.prottoy"
   ),
   RecentWork(
-    id: 2,
+      id: 2,
+      title: "Grocery Shopping App in Canada",
+      category: "Ongrocery",
+      image: "assets/images/ongrocery.webp",
+      url: "https://play.google.com/store/apps/details?id=com.zatiq.expresscart"
+  ),
+  RecentWork(
+      id: 2,
+      title: "Money Transferring Platform among Countries",
+      category: "GetBetal",
+      image: "assets/images/get_betal.webp",
+      url: "https://www.getbetal.com/"
+  ),
+  RecentWork(
+    id: 3,
     title: "Easytrax GPS Tracking",
     category: "EasyTrax",
     image: "assets/images/easytrax-app.webp",
     url: "https://play.google.com/store/apps/details?id=com.bd.easytraxstandard"
-  ),
-  RecentWork(
-    id: 3,
-    title: "Learning Platform for Mathematics",
-    category: "Math By Rony",
-    image: "assets/images/mathbyrony.webp",
-    url: ""
   ),
   RecentWork(
     id: 4,

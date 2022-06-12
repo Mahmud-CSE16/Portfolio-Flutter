@@ -47,7 +47,7 @@ class _MySkillsCardState extends State<MySkillsCard> {
           children: [
             CircularPercentIndicator(
               circularStrokeCap:CircularStrokeCap.round,
-              radius: 60,
+              radius: 30,
               percent: myskills[widget.index].percent/100,
               center: Image.asset(myskills[widget.index].image,width: 35,),
               progressColor: myskills[widget.index].indicatorColor,
